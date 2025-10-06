@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: aivara-backend
+    env: node
+    plan: starter
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    autoDeploy: true
+    envVars:
+      - key: SYMBOLS
+        value: "BTCUSDT,ETHUSDT,BNBUSDT,SOLUSDT"
+      - key: TIMEFRAME
+        value: "1m"
+      - key: ENGINE_INTERVAL
+        value: "30"
