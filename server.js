@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 const SYMBOLS = (process.env.SYMBOLS || 'BTCUSDT,ETHUSDT,BNBUSDT,SOLUSDT').split(',').map(s=>s.trim().toUpperCase());
 const TIMEFRAME = process.env.TIMEFRAME || '1m';
 const ENGINE_INTERVAL = Math.max(10, parseInt(process.env.ENGINE_INTERVAL || '30',10));
-const BASE = 'https://fapi.binance.com';
+const BASE = 'https://fapi1.binance.com';
 
 let SIGNALS = { updated_at: new Date().toISOString(), timeframe: TIMEFRAME, version: '1.0', signals: [] };
 
